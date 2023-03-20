@@ -26,7 +26,7 @@ def simplify_arith_expr(expr):
         out = repr(sympy_parser.parse_expr(str(expr)))
         return out
     except:
-        print "Couldn't parse", expr
+        print("Couldn't parse"), expr
         raise
 
 def increment_name(base, existing):
@@ -96,8 +96,8 @@ def release():
     time.sleep(0.1)
     refcount = pythoncom._GetInterfaceCount()
     if refcount > 0:
-        print "Warning! %d COM references still alive"
-        print "HFSS will likely refuse to shut down"
+        print("Warning! %d COM references still alive")
+        print("HFSS will likely refuse to shut down")
 
 class COMWrapper(object):
     def __init__(self):
